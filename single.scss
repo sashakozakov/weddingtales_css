@@ -508,6 +508,7 @@ SINGLE - Article
       overflow: hidden;
       margin-left: 0;
       margin-right: 0;
+      margin-bottom: 1em;
       img{
         max-width: 100%;
         width: 100%;
@@ -545,6 +546,11 @@ SINGLE - Article
           transform: translateY(-100%);
         }
       }
+    }
+
+    /* remove extra like button block */
+    .likebtn-wrapper{
+      display: none;
     }
   }
 }
@@ -595,13 +601,6 @@ SINGLE - Article
       }
     }
   }
-  &.default_share{
-    .lb-style-custom .lb-like .lb-a,
-    .lb-style-custom .ld-dislike .lb-a{
-      border: none;
-      background: transparent;
-    }
-  }
 }
 
 /* Social Share by Supsystic */
@@ -613,11 +612,18 @@ SINGLE - Article
     margin-right: 10px;
   }
   .social-sharing-button{
-    padding: 8px 7px !important;
-    margin: 0 7px 0 0 !important;
+    padding: 0 !important;
+    margin: 0 8px 0 0 !important;
     background-color: $main_color !important;
+    width: 27px;
+    height: 27px;
+    line-height: 30px;
+    text-align: center;
     &:hover{
       background-color: #7f6526 !important;
+    }
+    .fa{
+      font-size: 15px;
     }
   }
 }
@@ -874,6 +880,7 @@ List - Article
   }
   &_heading{
     background: #f8f8f8;
+    width: 100%;
     max-width: 315px;
     padding: 20px;
     text-align: center;
@@ -886,6 +893,7 @@ List - Article
       margin: 0;
       >a{
         color: #000;
+        font-family: $GFSDidotBoldItalic;
         &:hover{
           color: inherit;
           text-decoration: underline;
@@ -893,6 +901,7 @@ List - Article
       }
     }
     span{
+      font-size: 14px;
       margin-bottom: 10px;
     }
   }
@@ -901,6 +910,8 @@ List - Article
     font-size: 16px;
     font-style: italic;
     text-align: center;
+    max-width: 690px;
+    margin: 0 auto 20px;
   }
 }
 
@@ -923,7 +934,7 @@ List - Article
         text-rendering: auto;
         -webkit-font-smoothing: antialiased;
         color: $main_color;
-        margin: 0 15px;
+        margin: 0 12px;
         vertical-align: middle;
       }
     }
@@ -950,13 +961,6 @@ List - Article
     }
   }
 
-  .featured_heading{
-    padding-bottom: 0;
-    h3{
-      font-family: $head_font;
-      margin-bottom: 15px;
-    }
-  }
   .meta_couple{
     p{
       margin-bottom: 10px;
@@ -971,7 +975,6 @@ List - Article
   }
 
   .featured_text{
-    font-size: 19px;
     max-width: 690px;
     margin: 0 auto 20px;
   }
@@ -1020,15 +1023,25 @@ List - Article
   .blogger{
     padding-top: 65px;
     .main_btn{
-      margin-top: 15px;
       color: #fff;
+    }
+    @media only screen and (min-width: 480px){
+      &--image{
+        max-width: 160px;
+        float: left;
+      }
+      &__content{
+        padding-left: 190px;
+        figure{
+          display: none;
+        }
+      }
     }
   }
 
   .sidebar{
-    padding-top: 55px;
     .widget_custom_tags{
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
     .widget{
       &:not([class*="widget_custom_tags"]){
@@ -1039,7 +1052,22 @@ List - Article
       }
     }
   }
+}
 
+
+.blog{
+  .featured_heading{
+    padding-bottom: 0;
+    h3{
+      margin-bottom: 15px;
+    }
+  }
+  .featured_text{
+    font-size: 19px;
+  }
+  .sidebar{
+    padding-top: 55px;
+  }
 }
 
 /*********************
@@ -1091,11 +1119,22 @@ List Article extra styles
     }
   }
 
-  .widget_widget_custom_categories{
-    ul{
+  .sidebar{
+    .widget_likebtnlikebuttonmostlikedwidget{
       li{
-        a{
-          color: $main-color;
+        min-height: 49px;
+        &:before{
+          left: 7px;
+        }
+      }
+    }
+
+    .widget_widget_custom_categories{
+      ul{
+        li{
+          a{
+            color: $main-color;
+          }
         }
       }
     }
