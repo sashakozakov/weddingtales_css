@@ -1,0 +1,58 @@
+/* Foundation tweaks */
+
+$column_gutter: 15px;
+
+.row{
+	max-width: 1170px;
+}
+
+@if $column_gutter != 15px {
+	.row .row{
+		margin-left:-$column_gutter;
+		margin-right:-$column_gutter;
+	}
+	.column,.columns{
+		padding-left:$column_gutter;
+		padding-right:$column_gutter;
+	}
+	@media only screen{
+		.column,.columns{
+			padding-left:$column_gutter;
+			padding-right:$column_gutter;
+		}
+		.row.small-uncollapse>.column,
+		.row.small-uncollapse>.columns{
+			padding-left:$column_gutter;
+			padding-right:$column_gutter;
+		}
+	}
+	@media only screen and (min-width: 641px){
+		.column,.columns{
+			padding-left:$column_gutter;
+			padding-right:$column_gutter;
+		}
+		.row.medium-uncollapse>.column,
+		.row.medium-uncollapse>.columns{
+			padding-left:$column_gutter;
+			padding-right:$column_gutter;
+		}
+	}
+	@media only screen and (min-width: 1025px){
+		.column,.columns{
+			padding-left:$column_gutter;
+			padding-right:$column_gutter;
+		}
+		.row.large-uncollapse>.column,
+		.row.large-uncollapse>.columns{
+			padding-left:$column_gutter;
+			padding-right:$column_gutter;
+		}
+	}
+	@media only screen and (min-width: 1441px){
+		.row.xlarge-uncollapse>.column,
+		.row.xlarge-uncollapse>.columns{
+			padding-left:$column_gutter;
+			padding-right:$column_gutter;
+		}
+	}
+}

@@ -1,0 +1,64 @@
+@font-face {font-family: "notofontitalic";
+  src: url("../fonts/NotoSerifBoldItalic.eot"); /* IE9*/
+  src: url("../fonts/NotoSerifBoldItalic.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("../fonts/NotoSerifBoldItalic.woff2") format("woff2"), /* chrome、firefox */
+  url("../fonts/NotoSerifBoldItalic.woff") format("woff"), /* chrome、firefox */
+  url("../fonts/NotoSerifBoldItalic.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("../fonts/NotoSerifBoldItalic.svg#NotoSerifBoldItalic") format("svg"); /* iOS 4.1- */
+  font-style: italic;
+}
+@font-face {font-family: "GFSDidotBoldItalic";
+  src: url("../fonts/GFSDidotBoldItalic.eot"); /* IE9*/
+  src: url("../fonts/GFSDidotBoldItalic.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("../fonts/GFSDidotBoldItalic.woff2") format("woff2"), /* chrome、firefox */
+  url("../fonts/GFSDidotBoldItalic.woff") format("woff"), /* chrome、firefox */
+  url("../fonts/GFSDidotBoldItalic.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("../fonts/GFSDidotBoldItalic.svg#GFSDidotBoldItalic") format("svg"); /* iOS 4.1- */
+  font-style:italic;
+  font-weight: bold;
+}
+
+
+
+@mixin align-middle {
+	@include transform(translate(-50%, -50%));
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+@mixin vert-align{
+    font-size: 0;
+    &:before{
+        content: '';
+        height: 100%;
+        width: 0;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    >*{
+        vertical-align: middle;
+        display: inline-block;
+    }
+}
+
+//declare variables below
+$img_opacity: .7;
+
+
+$brown: #ae9760;
+$second: #457d8f;
+$second_hover: #235f73;
+
+$main_color: $brown;
+$main_color_hover: #7f6526;
+// $sub_color:
+
+$font: 'Open Sans', sans-serif;
+$notofontitalic: 'notofontitalic', sans-serif;
+$GFSDidotBoldItalic: 'GFSDidotBoldItalic', sans-serif;
+$gfs_diot: 'GFS Didot', sans-serif;
+// $sub_font:
+
+$text_font: $font;
+$head_font: $gfs_diot;
+$sub_font: $notofontitalic;
