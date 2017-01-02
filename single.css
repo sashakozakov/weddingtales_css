@@ -691,7 +691,7 @@ SINGLE - Article
   line-height: 18px;
   margin-right: 7px;
   border-radius: 2px;
-  border: 2px solid #fff;
+  border: 2px solid transparent;
 }
 
 .post_share .lb-style-custom .lb-count {
@@ -710,8 +710,8 @@ SINGLE - Article
           justify-content: center;
 }
 
-.single-post .post_share .lb-style-custom .lb-like,
-.single-post .post_share .lb-style-custom .ld-dislike {
+.single-post .post_share .lb-style-custom .lb-like .lb-a,
+.single-post .post_share .lb-style-custom .ld-dislike .lb-a {
   background-color: #D4DFE3;
 }
 
