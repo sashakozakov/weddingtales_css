@@ -342,6 +342,10 @@
   color: #000;
 }
 
+.home .relationship_grid--categories a {
+  text-transform: none;
+}
+
 @media (max-width: 767px) {
   .single-post .relationship_grid--image {
     max-width: 100%;
