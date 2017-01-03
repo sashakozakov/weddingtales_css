@@ -668,6 +668,10 @@ SINGLE - Article
   display: none;
 }
 
+.single-post .page_content .wp-caption-text a {
+  color: #457d8f;
+}
+
 .post_share {
   display: -webkit-box;
   display: -webkit-flex;

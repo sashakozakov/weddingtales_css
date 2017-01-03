@@ -555,12 +555,20 @@ SINGLE - Article
       }
     }
 
+
     /* remove extra like button block */
     .likebtn-wrapper{
       display: none;
     }
   }
 }
+    .single-post{
+      .page_content .wp-caption-text{
+        a{
+          color: $second;
+        }
+      }
+    }
 
 
 .post_share{
