@@ -1,6 +1,8 @@
 
 @import "inc/vars";
-
+.content.vendor{
+	padding-bottom: 75px;
+}
 .vendor{
 	p{
 		font-size: 14px;
@@ -22,7 +24,12 @@
 				float: left;
 				&.video{
 					text-align: center;
-				// @include vert-align();
+					@media (max-width:900px){
+						@include vert-align();
+						div{
+							width: 100%;
+						}
+					}
 
 				.videoWrapper {
 					position: relative;
@@ -58,6 +65,9 @@
 			outline:none;
 			cursor: pointer;
 			margin: 0 4px;
+			@media (max-width:800px){
+				text-align: center;
+			}
 			&.slick-current{
 				// margin-left: 15px;
 			}
@@ -73,6 +83,9 @@
 				height: 117px;
 			}
 		}
+		@media (max-width:500px){
+			display: none;
+		}
 	}
 }
 
@@ -86,7 +99,9 @@
 	text-align: center;
 	border: 1px solid #ebebeb;
 	padding-bottom: 2px;
-	padding-top: 20px;
+	&.sidebar{
+		padding-top: 20px;
+	}
 }
 &__contact-info{
 	max-width: 215px;
@@ -173,7 +188,15 @@
 	}
 	.gform_wrapper {
 		margin: 0 0 16px;
+			@media (max-width:1024px){
+				&.gf_browser_chrome .gform_body{
+					width: 100%;
+				}
+			}
 		form{
+			@media (max-width:1024px){
+				text-align: center;
+			}
 			.gform_heading{display: none;}
 			.top_label {
 				.gfield_label{
@@ -214,8 +237,15 @@
 			}
 			.gform_footer{
 				text-align: left;
-				padding-top: 2px;
+				padding-top: 0px;
 				padding-bottom: 0;
+				margin-top: 0;
+				@media (max-width:1024px){
+					text-align: center;
+					input:not([type=radio]):not([type=checkbox]):not([type=image]):not([type=file]){
+						width: auto;
+					}
+				}
 			}
 		}
 	}
@@ -249,6 +279,9 @@
 		&:hover{
 			opacity: $img_opacity;
 		}
+			@media (max-width:400px){
+				padding-bottom: 80%;
+			}
 	}
 	&--caption{
 		position: absolute;
@@ -291,6 +324,29 @@
 
 .comments-area{
 	padding-top: 50px;
+	&#comments {
+		.comments-title{
+			background: url('../images/icons/SYSTASEIS_ICON.png') no-repeat 0 50%;
+			@media (max-width:400px){
+				background-size: contain;
+				padding-left: 80px;
+				font-size: 22px;
+				height: 68px;
+				line-height: 68px;
+			}
+		}
+		form{
+			p{
+				margin-bottom: 0;
+				 & > label{
+				 	span{display: none;}
+				 }
+			}
+			textarea{
+				margin-bottom: 11px;
+			}
+		}
+	}
 }
 
 }

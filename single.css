@@ -1225,6 +1225,31 @@ List - Article
   }
 }
 
+/* Sidebar Blogger */
+.blogger_sidebar {
+  background: #FFF;
+  padding: 65px 15px 30px;
+  margin-top: 50px;
+  position: relative;
+  text-align: center;
+}
+
+.blogger_sidebar .top_image {
+  width: 90px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.blogger_sidebar h6 {
+  font-size: 16px;
+  line-height: 25px;
+  margin: 0 0 25px;
+}
+
 /*********************
 List Article extra styles
 *********************/
