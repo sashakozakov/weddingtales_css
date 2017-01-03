@@ -562,13 +562,13 @@ SINGLE - Article
     }
   }
 }
-    .single-post{
-      .page_content .wp-caption-text{
-        a{
-          color: $second;
-        }
-      }
+.single-post{
+  .page_content .wp-caption-text{
+    a{
+      color: $second;
     }
+  }
+}
 
 
 .post_share{
@@ -1037,25 +1037,6 @@ List - Article
     }
   }
 
-  .blogger{
-    padding-top: 65px;
-    .main_btn{
-      color: #fff;
-    }
-    @media only screen and (min-width: 480px){
-      &--image{
-        max-width: 160px;
-        float: left;
-      }
-      &__content{
-        padding-left: 190px;
-        figure{
-          display: none;
-        }
-      }
-    }
-  }
-
   .sidebar{
     .widget_custom_tags{
       margin-bottom: 30px;
@@ -1086,6 +1067,29 @@ List - Article
     padding-top: 55px;
   }
 }
+
+
+/* Widget Blogger */
+.widget .blogger{
+  padding-top: 65px;
+  .main_btn{
+    color: #fff;
+    margin-top: 15px;
+  }
+  @media only screen and (min-width: 480px){
+    &--image{
+      max-width: 160px;
+      float: left;
+    }
+    &__content{
+      padding-left: 190px;
+      figure{
+        display: none;
+      }
+    }
+  }
+}
+
 
 /*********************
 List Article extra styles
@@ -1174,6 +1178,7 @@ COMMENT STYLES
     height: 88px;
     line-height: 88px;
     padding-left: 100px;
+    font-weight: 600;
     background: url('../images/icon-comments.png') no-repeat 0 50%;
   }
 }

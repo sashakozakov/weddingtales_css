@@ -1171,32 +1171,6 @@ List - Article
   background-color: #235f73;
 }
 
-.blog .blogger,
-.archive .blogger {
-  padding-top: 65px;
-}
-
-.blog .blogger .main_btn,
-.archive .blogger .main_btn {
-  color: #fff;
-}
-
-@media only screen and (min-width: 480px) {
-  .blog .blogger--image,
-  .archive .blogger--image {
-    max-width: 160px;
-    float: left;
-  }
-  .blog .blogger__content,
-  .archive .blogger__content {
-    padding-left: 190px;
-  }
-  .blog .blogger__content figure,
-  .archive .blogger__content figure {
-    display: none;
-  }
-}
-
 .blog .sidebar .widget_custom_tags,
 .archive .sidebar .widget_custom_tags {
   margin-bottom: 30px;
@@ -1226,6 +1200,29 @@ List - Article
 
 .blog .sidebar {
   padding-top: 55px;
+}
+
+/* Widget Blogger */
+.widget .blogger {
+  padding-top: 65px;
+}
+
+.widget .blogger .main_btn {
+  color: #fff;
+  margin-top: 15px;
+}
+
+@media only screen and (min-width: 480px) {
+  .widget .blogger--image {
+    max-width: 160px;
+    float: left;
+  }
+  .widget .blogger__content {
+    padding-left: 190px;
+  }
+  .widget .blogger__content figure {
+    display: none;
+  }
 }
 
 /*********************
@@ -1305,6 +1302,7 @@ COMMENT STYLES
   height: 88px;
   line-height: 88px;
   padding-left: 100px;
+  font-weight: 600;
   background: url("../images/icon-comments.png") no-repeat 0 50%;
 }
 

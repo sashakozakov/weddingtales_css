@@ -127,8 +127,7 @@ SINGLE - Post
 			}
 		}
 		&--image{
-			max-width: 198.5px;
-			width: 100%;
+			width: calc(25% - 10px);
 			padding-bottom: 32.5%;
 			background-size: cover;
 			background-position: 50%;

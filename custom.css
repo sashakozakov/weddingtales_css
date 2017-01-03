@@ -481,6 +481,7 @@ textarea {
   padding: 5px 17px !important;
   height: 48px;
   margin-bottom: 13px;
+  display: inline-block;
 }
 
 textarea[rows] {
@@ -1765,8 +1766,8 @@ SINGLE - Post
 .single-post .post_gallery--image,
 .archive .post_gallery--image,
 .blog .post_gallery--image {
-  max-width: 198.5px;
-  width: 100%;
+  width: -webkit-calc(25% - 10px);
+  width: calc(25% - 10px);
   padding-bottom: 32.5%;
   background-size: cover;
   background-position: 50%;
@@ -2559,6 +2560,10 @@ button:hover, button:focus, .button:hover, .button:focus, input[type='submit']:h
   padding: 5px 0;
   height: 32px;
   margin: 0;
+}
+.footer_newsletter .gform_wrapper .gform_footer input.button:hover,
+.footer_newsletter .gform_wrapper .gform_footer input[type=submit]:hover {
+  background: transparent;
 }
 .footer_menu {
   padding-top: 28px;

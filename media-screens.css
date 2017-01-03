@@ -603,6 +603,20 @@
   .banner_caption h5 {
     line-height: 28px;
   }
+
+  .single-post .post_gallery .full-gallery,
+  .archive .post_gallery .full-gallery,
+  .blog .post_gallery .full-gallery {
+    width: 105px;
+    height: 105px;
+  }
+  .single-post .post_gallery ul li,
+  .archive .post_gallery ul li,
+  .blog .post_gallery ul li {
+    max-width: -webkit-calc(50% - 10px);
+    max-width: calc(50% - 10px);
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 360px) {
   .main_btn {
