@@ -166,7 +166,6 @@
 }
 
 .text-with-image {
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -200,25 +199,21 @@
 
 @media only screen and (min-width: 768px) {
   .text-with-image.image-left .image {
-    -webkit-box-ordinal-group: 2;
     -webkit-order: 1;
         -ms-flex-order: 1;
             order: 1;
   }
   .text-with-image.image-left .text-with-icon {
-    -webkit-box-ordinal-group: 3;
     -webkit-order: 2;
         -ms-flex-order: 2;
             order: 2;
   }
   .text-with-image.image-right .image {
-    -webkit-box-ordinal-group: 3;
     -webkit-order: 2;
         -ms-flex-order: 2;
             order: 2;
   }
   .text-with-image.image-right .text-with-icon {
-    -webkit-box-ordinal-group: 2;
     -webkit-order: 1;
         -ms-flex-order: 1;
             order: 1;
@@ -381,11 +376,9 @@ SIDEBAR
   font-weight: normal;
   min-height: 50px;
   padding-left: 57px;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
@@ -492,8 +485,7 @@ SIDEBAR
 
 .adrotate_group img {
   -webkit-backface-visibility: hidden;
-  -webkit-transition: all 0.3s;
-          transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .adrotate_group img:hover {
@@ -640,8 +632,7 @@ SINGLE - Article
   left: 0;
   z-index: 2;
   opacity: 0.5;
-  -webkit-transition: all 0.4s ease-out;
-          transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
 }
 
 .page_content .wp-caption-text p {
@@ -673,11 +664,9 @@ SINGLE - Article
 }
 
 .post_share {
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
@@ -716,7 +705,6 @@ SINGLE - Article
 }
 
 .single-post .post_share {
-  -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -853,9 +841,7 @@ SINGLE - Article
     padding: 0 20px;
     margin-bottom: 15px;
   }
-  .vendors_body > li:nth-child(3n) .vendors_image:after,
-  .vendors_body > li:only-child .vendors_image:after,
-  .vendors_body > li:last-child .vendors_image:after {
+  .vendors_body > li:nth-child(3n) .vendors_image:after, .vendors_body > li:only-child .vendors_image:after, .vendors_body > li:last-child .vendors_image:after {
     border-right: none;
   }
 }
@@ -1072,8 +1058,7 @@ List - Article
   margin: 0;
 }
 
-.masonry_title h2:before,
-.masonry_title h2:after {
+.masonry_title h2:before, .masonry_title h2:after {
   content: "\f004";
   display: inline-block;
   width: 15px;
@@ -1131,8 +1116,7 @@ List - Article
   margin: 0 auto 20px;
 }
 
-.blog .masonry_title h2:before,
-.blog .masonry_title h2:after,
+.blog .masonry_title h2:before, .blog .masonry_title h2:after,
 .archive .masonry_title h2:before,
 .archive .masonry_title h2:after {
   color: #457d8f;
@@ -1277,8 +1261,7 @@ List Article extra styles
   color: #ae9760;
 }
 
-.post-type-archive-article .masonry_title h2:before,
-.post-type-archive-article .masonry_title h2:after,
+.post-type-archive-article .masonry_title h2:before, .post-type-archive-article .masonry_title h2:after,
 .tax-article-category .masonry_title h2:before,
 .tax-article-category .masonry_title h2:after {
   color: #ae9760;
@@ -1351,10 +1334,7 @@ List Moodboards
   margin-bottom: 10px;
 }
 
-.isotope_controls .btn_small.is-checked,
-.isotope_controls .btn_small:hover,
-.isotope_controls .btn_small:focus,
-.isotope_controls .btn_small:active {
+.isotope_controls .btn_small.is-checked, .isotope_controls .btn_small:hover, .isotope_controls .btn_small:focus, .isotope_controls .btn_small:active {
   background: #235f73;
 }
 
@@ -1393,8 +1373,7 @@ List Moodboards
   position: relative;
 }
 
-.isotope_title span:before,
-.isotope_title span:after {
+.isotope_title span:before, .isotope_title span:after {
   content: "";
   display: block;
   width: 1000px;
@@ -1413,6 +1392,21 @@ List Moodboards
 
 .isotope .element-item {
   width: 33.3%;
+  position: relative;
+}
+
+.isotope .element_title {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 20px;
+  background: #FFF;
+  max-width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 /*********************
@@ -1565,9 +1559,7 @@ COMMENT FORM STYLES
   box-shadow: none !important;
 }
 
-.comment-respond form input[type=text]:focus,
-.comment-respond form input[type=text]:hover,
-.comment-respond form input[type=text]:active,
+.comment-respond form input[type=text]:focus, .comment-respond form input[type=text]:hover, .comment-respond form input[type=text]:active,
 .comment-respond form input[type=email]:focus,
 .comment-respond form input[type=email]:hover,
 .comment-respond form input[type=email]:active,
