@@ -1533,7 +1533,7 @@ ul.pagination li a {
   font-weight: 600;
 }
 .home__gallery--image {
-  padding-top: 67.5%;
+  padding-top: 68%;
   background-size: cover;
   background-position: 50%;
   margin-bottom: 15px;
@@ -2392,7 +2392,7 @@ SINGLE - Post
   bottom: 0;
   left: 20px;
   right: 20px;
-  background: #FFF;
+  background: #f8f8f8;
   padding: 2px 10px 0px;
 }
 .vendor__featured--caption .title {
@@ -2450,19 +2450,34 @@ SINGLE - Post
 }
 
 /* vendor step 1 page */
+.post-type-archive-vendor .page_header {
+  margin-bottom: 13px;
+}
+.post-type-archive-vendor p {
+  letter-spacing: -.255px;
+}
 .post-type-archive-vendor .breadcrumbs {
-  color: #ae9760;
+  color: #ae9760 !important;
+}
+.post-type-archive-vendor .breadcrumbs .home {
+  color: #ae9760 !important;
 }
 .post-type-archive-vendor .breadcrumbs span > span {
   display: inline-block;
 }
-.post-type-archive-vendor .categories__list {
+.post-type-archive-vendor .vendor__categories {
+  max-width: 1140px;
+  margin: 10px auto 0;
+}
+.post-type-archive-vendor .vendor__categories__list {
   list-style: none;
   font-size: 0;
   margin-bottom: 20px;
   position: relative;
+  float: left;
+  width: 100%;
 }
-.post-type-archive-vendor .categories__list:before {
+.post-type-archive-vendor .vendor__categories__list:after {
   position: absolute;
   content: "";
   left: 15px;
@@ -2472,15 +2487,16 @@ SINGLE - Post
   width: -webkit-calc(100% - 30px);
   width: calc(100% - 30px);
   background: #bebebe;
+  display: block;
 }
-.post-type-archive-vendor .categories__item {
+.post-type-archive-vendor .vendor__categories__item {
   display: inline-block;
   max-width: 255px;
   width: 100%;
   border: 1px solid #eae4d7;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
-.post-type-archive-vendor .categories__item--image {
+.post-type-archive-vendor .vendor__categories__item--image {
   position: relative;
   border: 4px solid #fff;
   display: inline-block;
@@ -2489,10 +2505,10 @@ SINGLE - Post
   padding-bottom: 88%;
   display: block;
 }
-.post-type-archive-vendor .categories__item--image:hover {
+.post-type-archive-vendor .vendor__categories__item--image:hover {
   opacity: 0.7;
 }
-.post-type-archive-vendor .categories__item--title {
+.post-type-archive-vendor .vendor__categories__item--title {
   display: block;
   font-size: 22px;
   background: #fff;
@@ -2501,8 +2517,24 @@ SINGLE - Post
   color: #ae9760;
   text-align: center;
   border: 4px solid #fff;
+  text-transform: uppercase;
+  position: relative;
 }
-.post-type-archive-vendor .categories__item:hover .categories__item--image {
+.post-type-archive-vendor .vendor__categories__item--title:before {
+  position: absolute;
+  content: "";
+  background: url(../images/header_dots.png);
+  height: 4px;
+  background-repeat: repeat-x;
+  -webkit-transform: translateZ(0) scale(1, 1) rotate(180deg);
+          transform: translateZ(0) scale(1, 1) rotate(180deg);
+  bottom: -webkit-calc(100% + 8px);
+  bottom: calc(100% + 8px);
+  right: 0;
+  left: 0;
+  background-position: 0 100%;
+}
+.post-type-archive-vendor .vendor__categories__item:hover .categories__item--image {
   opacity: 0.7;
 }
 
