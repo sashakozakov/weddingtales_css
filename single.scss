@@ -1277,9 +1277,14 @@ List Moodboards
   }
 
   .element-item{
-    width: 33.3%;
     padding: 2px;
     position: relative;
+    @media only screen and (min-width: 480px){
+       width: 50%;
+    }
+    @media only screen and (min-width: 768px){
+      width: 33.3%;
+    }
     img{
       display: block;
     }
@@ -1309,9 +1314,50 @@ List Moodboards
       }
     }
   }
-
 }
 
+
+/*********************
+Single Moodboards
+*********************/
+.moodboard{
+  &_style{
+    a:hover{
+      color: #000;
+      text-decoration: underline;
+    }
+  }
+  &_colors{
+    text-align: center;
+    h4{
+      font-family: $GFSDidotBoldItalic;
+      font-size: 18px;
+    }
+    a{
+      display: inline-block;
+      width: 57px;
+      height: 56px;
+      background-image: url('../images/color-shape.png');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: contain;
+      margin: 0 6px 15px;
+      &:hover{
+        opacity: $img_opacity;
+      }
+    }
+  }
+
+  .isotope{
+    padding-top: 15px;
+    margin-bottom: 45px;
+  }
+  .supsystic-social-sharing{
+    border-right: none !important;
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+  }
+}
 
 
 /*********************

@@ -373,7 +373,7 @@
 		margin: 10px auto 0;
 		&__list{
 			list-style: none;
-			font-size: 0;
+			// font-size: 0;
 			margin-bottom: 20px;
 			position: relative;
 			float: left;
@@ -432,6 +432,7 @@
 					background-position: 0 100%;
 				}
 			}
+			.child_blocks {display: none;}
 				&:hover{
 					.categories__item--image{
 						opacity: $img_opacity;

@@ -2471,7 +2471,6 @@ SINGLE - Post
 }
 .post-type-archive-vendor .vendor__categories__list {
   list-style: none;
-  font-size: 0;
   margin-bottom: 20px;
   position: relative;
   float: left;
@@ -2533,6 +2532,9 @@ SINGLE - Post
   right: 0;
   left: 0;
   background-position: 0 100%;
+}
+.post-type-archive-vendor .vendor__categories__item .child_blocks {
+  display: none;
 }
 .post-type-archive-vendor .vendor__categories__item:hover .categories__item--image {
   opacity: 0.7;
