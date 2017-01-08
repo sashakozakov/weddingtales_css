@@ -6,7 +6,6 @@
 .vendor{
 	p{
 		font-size: 14px;
-		font-weight: 300;
 		line-height: 24px;
 		margin-bottom: 26px;
 	}
@@ -353,7 +352,8 @@
 
 
 /* vendor step 1 page */
-.post-type-archive-vendor{
+.post-type-archive-vendor,
+.tax-vendor-profession{
 	.page_header {
 		margin-bottom: 13px;
 	}
@@ -362,10 +362,91 @@
 	}
 	.breadcrumbs{
 		color: $main_color !important;
-		.home{
+		.home,
+		a{
 			color: $main_color !important;
 		}
 		span > span{display: inline-block;}
+	}
+
+	.category__select{
+		position: relative;
+		padding: 20px 0 20px 60px;
+		float: left;
+		width: 100%;
+		&:before{
+			position: absolute;
+			content: "";
+			background: url('../images/icons/DREAM_TEAM_ICON.png') 50% no-repeat;
+			background-size: contain;
+			width: 55px;
+			height: 55px;
+			top: 0;
+			left: 0;
+		}
+		& > ul{
+			max-width: 250px;
+			li{
+				list-style: none;
+				position: relative;
+				.current_cat{
+					font-size: 12px;
+					color: $main_color;
+					text-transform: uppercase;
+					border-bottom: 1px solid #bebebe;
+					display: block;
+					position: relative;
+					&:before{
+						position: absolute;
+						content: "";
+						background: url('../images/icon-arrow-down.png') no-repeat 50%;
+						background-size: contain;
+						width: 20px;
+						height: 10px;
+						top: 50%;
+						transform:translateY(-50%);
+						right: 0;
+					}
+					&.active{
+						&:before{
+							transform:translateY(-50%) rotate(180deg);
+						}
+					}
+				}
+				.subtitle{
+					display: none;
+					position: absolute;
+					content: "";
+					top: 100%;
+					right: 0;
+					left: 0;
+					z-index: 999;
+					background: #F8F8F8;
+					margin: 0;
+					padding: 10px;
+					border-width: 0 1px 1px 1px;
+					border-style: solid;
+					border-color: #BEBEBE;
+					li{
+						font-size: 12px;
+						color: $main_color;
+						text-transform: uppercase;
+						line-height: 1.6;
+						padding: 5px 0;
+						a{
+							font-size: 12px;
+							color: $main_color;
+							text-transform: uppercase;
+							border: none;
+							display: block;
+							&:hover{
+								text-decoration: underline;
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 
 	.vendor__categories{
@@ -404,6 +485,19 @@
 				background-position: 50%;
 				padding-bottom: 88%;
 				display: block;
+				&:before{
+					position: absolute;
+					content: "";
+					background: url(../images/header_dots.png);
+					height: 4px;
+					background-repeat: repeat-x;
+					transform:translateZ(0) scale(1.0, 1.0) rotate(180deg);
+					// bottom: calc(100% + 8px);
+					top: calc(100% - 4px);
+					right: 0;
+					left: 0;
+					background-position: 0 100%;
+				}
 				&:hover{
 					opacity: $img_opacity;
 				}
@@ -419,17 +513,23 @@
 				border:4px solid #fff;
 				text-transform: uppercase;
 				position: relative;
-				&:before{
-					position: absolute;
-					content: "";
-					background: url(../images/header_dots.png);
-					height: 4px;
-					background-repeat: repeat-x;
-					transform:translateZ(0) scale(1.0, 1.0) rotate(180deg);
-					bottom: calc(100% + 8px);
-					right: 0;
-					left: 0;
-					background-position: 0 100%;
+				div{
+					font-size: 14px;
+				}
+				@include vert-align();
+				&.prefered{
+					&:after{
+						position: absolute;
+						content: "";
+						width: 71px;
+						height: 45px;
+						background: url('../images/prefered_vendor.png');
+						background-size: contain;
+						bottom: 100%;
+						z-index: 99;
+						left: 0;right: 0;
+						margin: 0 auto;
+					}
 				}
 			}
 			.child_blocks {display: none;}
@@ -440,4 +540,8 @@
 				}
 		}
 	}
+}
+
+.tax-vendor-profession{
+	.breadcrumbs span > span{display: none;}
 }

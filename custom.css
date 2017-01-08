@@ -2095,7 +2095,6 @@ SINGLE - Post
 
 .vendor p {
   font-size: 14px;
-  font-weight: 300;
   line-height: 24px;
   margin-bottom: 26px;
 }
@@ -2450,33 +2449,135 @@ SINGLE - Post
 }
 
 /* vendor step 1 page */
-.post-type-archive-vendor .page_header {
+.post-type-archive-vendor .page_header,
+.tax-vendor-profession .page_header {
   margin-bottom: 13px;
 }
-.post-type-archive-vendor p {
+.post-type-archive-vendor p,
+.tax-vendor-profession p {
   letter-spacing: -.255px;
 }
-.post-type-archive-vendor .breadcrumbs {
+.post-type-archive-vendor .breadcrumbs,
+.tax-vendor-profession .breadcrumbs {
   color: #ae9760 !important;
 }
-.post-type-archive-vendor .breadcrumbs .home {
+.post-type-archive-vendor .breadcrumbs .home,
+.post-type-archive-vendor .breadcrumbs a,
+.tax-vendor-profession .breadcrumbs .home,
+.tax-vendor-profession .breadcrumbs a {
   color: #ae9760 !important;
 }
-.post-type-archive-vendor .breadcrumbs span > span {
+.post-type-archive-vendor .breadcrumbs span > span,
+.tax-vendor-profession .breadcrumbs span > span {
   display: inline-block;
 }
-.post-type-archive-vendor .vendor__categories {
+.post-type-archive-vendor .category__select,
+.tax-vendor-profession .category__select {
+  position: relative;
+  padding: 20px 0 20px 60px;
+  float: left;
+  width: 100%;
+}
+.post-type-archive-vendor .category__select:before,
+.tax-vendor-profession .category__select:before {
+  position: absolute;
+  content: "";
+  background: url("../images/icons/DREAM_TEAM_ICON.png") 50% no-repeat;
+  background-size: contain;
+  width: 55px;
+  height: 55px;
+  top: 0;
+  left: 0;
+}
+.post-type-archive-vendor .category__select > ul,
+.tax-vendor-profession .category__select > ul {
+  max-width: 250px;
+}
+.post-type-archive-vendor .category__select > ul li,
+.tax-vendor-profession .category__select > ul li {
+  list-style: none;
+  position: relative;
+}
+.post-type-archive-vendor .category__select > ul li .current_cat,
+.tax-vendor-profession .category__select > ul li .current_cat {
+  font-size: 12px;
+  color: #ae9760;
+  text-transform: uppercase;
+  border-bottom: 1px solid #bebebe;
+  display: block;
+  position: relative;
+}
+.post-type-archive-vendor .category__select > ul li .current_cat:before,
+.tax-vendor-profession .category__select > ul li .current_cat:before {
+  position: absolute;
+  content: "";
+  background: url("../images/icon-arrow-down.png") no-repeat 50%;
+  background-size: contain;
+  width: 20px;
+  height: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0;
+}
+.post-type-archive-vendor .category__select > ul li .current_cat.active:before,
+.tax-vendor-profession .category__select > ul li .current_cat.active:before {
+  -webkit-transform: translateY(-50%) rotate(180deg);
+      -ms-transform: translateY(-50%) rotate(180deg);
+          transform: translateY(-50%) rotate(180deg);
+}
+.post-type-archive-vendor .category__select > ul li .subtitle,
+.tax-vendor-profession .category__select > ul li .subtitle {
+  display: none;
+  position: absolute;
+  content: "";
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  background: #F8F8F8;
+  margin: 0;
+  padding: 10px;
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  border-color: #BEBEBE;
+}
+.post-type-archive-vendor .category__select > ul li .subtitle li,
+.tax-vendor-profession .category__select > ul li .subtitle li {
+  font-size: 12px;
+  color: #ae9760;
+  text-transform: uppercase;
+  line-height: 1.6;
+  padding: 5px 0;
+}
+.post-type-archive-vendor .category__select > ul li .subtitle li a,
+.tax-vendor-profession .category__select > ul li .subtitle li a {
+  font-size: 12px;
+  color: #ae9760;
+  text-transform: uppercase;
+  border: none;
+  display: block;
+}
+.post-type-archive-vendor .category__select > ul li .subtitle li a:hover,
+.tax-vendor-profession .category__select > ul li .subtitle li a:hover {
+  text-decoration: underline;
+}
+.post-type-archive-vendor .vendor__categories,
+.tax-vendor-profession .vendor__categories {
   max-width: 1140px;
   margin: 10px auto 0;
 }
-.post-type-archive-vendor .vendor__categories__list {
+.post-type-archive-vendor .vendor__categories__list,
+.tax-vendor-profession .vendor__categories__list {
   list-style: none;
   margin-bottom: 20px;
   position: relative;
   float: left;
   width: 100%;
 }
-.post-type-archive-vendor .vendor__categories__list:after {
+.post-type-archive-vendor .vendor__categories__list:after,
+.tax-vendor-profession .vendor__categories__list:after {
   position: absolute;
   content: "";
   left: 15px;
@@ -2488,14 +2589,16 @@ SINGLE - Post
   background: #bebebe;
   display: block;
 }
-.post-type-archive-vendor .vendor__categories__item {
+.post-type-archive-vendor .vendor__categories__item,
+.tax-vendor-profession .vendor__categories__item {
   display: inline-block;
   max-width: 255px;
   width: 100%;
   border: 1px solid #eae4d7;
   margin-bottom: 20px;
 }
-.post-type-archive-vendor .vendor__categories__item--image {
+.post-type-archive-vendor .vendor__categories__item--image,
+.tax-vendor-profession .vendor__categories__item--image {
   position: relative;
   border: 4px solid #fff;
   display: inline-block;
@@ -2504,10 +2607,27 @@ SINGLE - Post
   padding-bottom: 88%;
   display: block;
 }
-.post-type-archive-vendor .vendor__categories__item--image:hover {
+.post-type-archive-vendor .vendor__categories__item--image:before,
+.tax-vendor-profession .vendor__categories__item--image:before {
+  position: absolute;
+  content: "";
+  background: url(../images/header_dots.png);
+  height: 4px;
+  background-repeat: repeat-x;
+  -webkit-transform: translateZ(0) scale(1, 1) rotate(180deg);
+          transform: translateZ(0) scale(1, 1) rotate(180deg);
+  top: -webkit-calc(100% - 4px);
+  top: calc(100% - 4px);
+  right: 0;
+  left: 0;
+  background-position: 0 100%;
+}
+.post-type-archive-vendor .vendor__categories__item--image:hover,
+.tax-vendor-profession .vendor__categories__item--image:hover {
   opacity: 0.7;
 }
-.post-type-archive-vendor .vendor__categories__item--title {
+.post-type-archive-vendor .vendor__categories__item--title,
+.tax-vendor-profession .vendor__categories__item--title {
   display: block;
   font-size: 22px;
   background: #fff;
@@ -2518,26 +2638,50 @@ SINGLE - Post
   border: 4px solid #fff;
   text-transform: uppercase;
   position: relative;
+  font-size: 0;
 }
-.post-type-archive-vendor .vendor__categories__item--title:before {
+.post-type-archive-vendor .vendor__categories__item--title div,
+.tax-vendor-profession .vendor__categories__item--title div {
+  font-size: 14px;
+}
+.post-type-archive-vendor .vendor__categories__item--title:before,
+.tax-vendor-profession .vendor__categories__item--title:before {
+  content: '';
+  height: 100%;
+  width: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+.post-type-archive-vendor .vendor__categories__item--title > *,
+.tax-vendor-profession .vendor__categories__item--title > * {
+  vertical-align: middle;
+  display: inline-block;
+}
+.post-type-archive-vendor .vendor__categories__item--title.prefered:after,
+.tax-vendor-profession .vendor__categories__item--title.prefered:after {
   position: absolute;
   content: "";
-  background: url(../images/header_dots.png);
-  height: 4px;
-  background-repeat: repeat-x;
-  -webkit-transform: translateZ(0) scale(1, 1) rotate(180deg);
-          transform: translateZ(0) scale(1, 1) rotate(180deg);
-  bottom: -webkit-calc(100% + 8px);
-  bottom: calc(100% + 8px);
-  right: 0;
+  width: 71px;
+  height: 45px;
+  background: url("../images/prefered_vendor.png");
+  background-size: contain;
+  bottom: 100%;
+  z-index: 99;
   left: 0;
-  background-position: 0 100%;
+  right: 0;
+  margin: 0 auto;
 }
-.post-type-archive-vendor .vendor__categories__item .child_blocks {
+.post-type-archive-vendor .vendor__categories__item .child_blocks,
+.tax-vendor-profession .vendor__categories__item .child_blocks {
   display: none;
 }
-.post-type-archive-vendor .vendor__categories__item:hover .categories__item--image {
+.post-type-archive-vendor .vendor__categories__item:hover .categories__item--image,
+.tax-vendor-profession .vendor__categories__item:hover .categories__item--image {
   opacity: 0.7;
+}
+
+.tax-vendor-profession .breadcrumbs span > span {
+  display: none;
 }
 
 /* -----------------------------------------

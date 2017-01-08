@@ -1279,6 +1279,45 @@ List Moodboards
   .element-item{
     padding: 2px;
     position: relative;
+    a{
+      display: block;
+      position: relative;
+      &:before{
+        position: absolute;
+        content: "";
+        left: 0;right: 0;top: 0;bottom: 0;
+        transform:scale(.5);
+        transition: all .2s;
+      }
+      &:after{
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "\f00e";
+        position: absolute;
+        top: 50%;
+        left: 0;right: 0;
+        font-size: 28px;
+        color: #FFF;
+        text-align: center;
+        transform:translateY(-50%) scale(.5);
+        opacity: 0;
+        transition: all .2s;
+      }
+      &:hover{
+        &:before{
+          transform:scale(1);
+          background: rgba(0,0,0,.5);
+        }
+        &:after{
+        transform:translateY(-50%) scale(1);
+        opacity: 1;
+        }
+      }
+    }
     @media only screen and (min-width: 480px){
        width: 50%;
     }
@@ -1321,6 +1360,9 @@ List Moodboards
 Single Moodboards
 *********************/
 .moodboard{
+  .pinit-button{
+    display: none !important;
+  }
   &_style{
     a:hover{
       color: #000;
