@@ -71,6 +71,7 @@
 ----------------------------------------- */
 html,body{
 	height: auto;
+	overflow-x: hidden;
 }
 html{
 	min-height: 100%;
@@ -336,6 +337,42 @@ a {
 	@include background-size(cover);
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
+}
+
+/*-------------------------------
+        Fancybox
+-------------------------------*/
+.fancybox-opened {
+	.fancybox-title{
+		background: rgba(255, 255, 255, 0.8);
+		width: 100%;
+		font-size: 13px;
+		font-weight: 300;
+		font-style: italic;
+		text-align: left;
+		padding: 5px 10px;
+		margin: 0;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 9999;
+		opacity: 0;
+		transition: all 0.2s ease-out;
+		p{
+			margin-bottom: 0;
+			font-style: italic;
+			color: $second;
+			strong{
+				color: #000;
+			}
+		}
+	}
+	&:hover{
+		.fancybox-title{
+			opacity: 1;
+			// transform: translateY(-100%);
+		}
+	}
 }
 
 /*-------------------------------
@@ -919,6 +956,9 @@ ul.pagination li a {
 			top: 17px;
 			left: -30px;
 		}
+		ul.gform_fields li.gfield{
+			padding-right: 0;
+		}
 		form{
 			position: relative;
 			max-width: 335px;
@@ -944,7 +984,7 @@ ul.pagination li a {
 			display: inline-block;
 			position: absolute;
 			bottom: 15px;
-			right: 0;
+			right: 10px;
 			margin: 0;
 			padding: 0;
 			input.button,
@@ -956,6 +996,10 @@ ul.pagination li a {
 				font-weight: 300;
 				background: none;
 				padding: 5px 0;
+				margin: 0;
+				&:hover{
+					background: transparent;
+				}
 			}
 		}
 	}
@@ -1148,6 +1192,8 @@ ul.pagination li a {
 		}
 	}
 	&--block{
+		float: left;
+		width: 100%;
 		&--title{
 			font-size: 14px;
 			margin-bottom: 3px;
@@ -1184,7 +1230,7 @@ ul.pagination li a {
 		}
 	}
 	&--image{
-		padding-top: 68%;
+		padding-top: 64%;
 		background-size: cover;
 		background-position: 50%;
 		margin-bottom: 15px;

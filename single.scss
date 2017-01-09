@@ -1228,6 +1228,7 @@ List Moodboards
       }
       &.is-checked{
         font-weight: bold;
+        outline:none;
       }
     }
   }
@@ -1279,7 +1280,7 @@ List Moodboards
   .element-item{
     padding: 2px;
     position: relative;
-    a{
+    & > a{
       display: block;
       position: relative;
       &:before{

@@ -1366,6 +1366,7 @@ List Moodboards
 
 .isotope_controls .btn_small.is-checked {
   font-weight: bold;
+  outline: none;
 }
 
 .isotope_block {
@@ -1422,12 +1423,12 @@ List Moodboards
   position: relative;
 }
 
-.isotope .element-item a {
+.isotope .element-item > a {
   display: block;
   position: relative;
 }
 
-.isotope .element-item a:before {
+.isotope .element-item > a:before {
   position: absolute;
   content: "";
   left: 0;
@@ -1441,7 +1442,7 @@ List Moodboards
           transition: all 0.2s;
 }
 
-.isotope .element-item a:after {
+.isotope .element-item > a:after {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -1464,14 +1465,14 @@ List Moodboards
           transition: all 0.2s;
 }
 
-.isotope .element-item a:hover:before {
+.isotope .element-item > a:hover:before {
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);
   background: rgba(0, 0, 0, 0.5);
 }
 
-.isotope .element-item a:hover:after {
+.isotope .element-item > a:hover:after {
   -webkit-transform: translateY(-50%) scale(1);
       -ms-transform: translateY(-50%) scale(1);
           transform: translateY(-50%) scale(1);
