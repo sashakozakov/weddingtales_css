@@ -89,12 +89,26 @@ SINGLE - Post
 		font-size: 12px;
 		margin: 14px 0 0;
 		display: block;
+		font-weight: 600;
 		.fa{
+			font-size: 14px;
+			margin-right: 4px;
 			color: #586263;
 		}
 		.lb-style-custom .lb-like,
 		.lb-style-custom .lb-dislike{
 			border: none;
+		}
+		.comment_number,
+		.lb-style-custom .lb-count{
+			font-style: italic;
+			font-weight: 600 !important;
+		}
+		.lb-style-custom .lb-count{
+			position: relative;
+			top: -1px;
+			color: #222;
+			font-family: $font !important;
 		}
 	}
 

@@ -1756,10 +1756,13 @@ SINGLE - Post
   font-size: 12px;
   margin: 14px 0 0;
   display: block;
+  font-weight: 600;
 }
 .single-post .date .fa,
 .archive .date .fa,
 .blog .date .fa {
+  font-size: 14px;
+  margin-right: 4px;
   color: #586263;
 }
 .single-post .date .lb-style-custom .lb-like,
@@ -1769,6 +1772,23 @@ SINGLE - Post
 .blog .date .lb-style-custom .lb-like,
 .blog .date .lb-style-custom .lb-dislike {
   border: none;
+}
+.single-post .date .comment_number,
+.single-post .date .lb-style-custom .lb-count,
+.archive .date .comment_number,
+.archive .date .lb-style-custom .lb-count,
+.blog .date .comment_number,
+.blog .date .lb-style-custom .lb-count {
+  font-style: italic;
+  font-weight: 600 !important;
+}
+.single-post .date .lb-style-custom .lb-count,
+.archive .date .lb-style-custom .lb-count,
+.blog .date .lb-style-custom .lb-count {
+  position: relative;
+  top: -1px;
+  color: #222;
+  font-family: "Open Sans", sans-serif !important;
 }
 .single-post .post_gallery,
 .archive .post_gallery,
@@ -2744,8 +2764,8 @@ SINGLE - Post
   vertical-align: middle;
   display: inline-block;
 }
-.post-type-archive-vendor .vendor__categories__item--title.prefered:after,
-.tax-vendor-profession .vendor__categories__item--title.prefered:after {
+.post-type-archive-vendor .vendor__categories__item--title.premium:after,
+.tax-vendor-profession .vendor__categories__item--title.premium:after {
   position: absolute;
   content: "";
   width: 71px;
