@@ -492,12 +492,6 @@ SIDEBAR
 
 .adrotate_group img {
   -webkit-backface-visibility: hidden;
-  -webkit-transition: all 0.3s;
-          transition: all 0.3s;
-}
-
-.adrotate_group img:hover {
-  opacity: 0.8;
 }
 
 .widget_for-you {
@@ -939,6 +933,10 @@ SINGLE - Article
   border-bottom: 1px solid #bebebe;
 }
 
+.related_list:empty {
+  display: none;
+}
+
 @media only screen and (min-width: 768px) {
   .related_item {
     float: left;
@@ -1089,6 +1087,14 @@ List - Article
 - Blog - List Post,
 - Archive
 *********************/
+.archive.category .breadcrumbs {
+  color: #457d8f !important;
+}
+
+.archive.category .breadcrumbs .home, .archive.category .breadcrumbs a {
+  color: #457d8f !important;
+}
+
 .blog,
 .archive {
   background: #F8F8F8;
@@ -1184,6 +1190,28 @@ List - Article
 .blog .sidebar .widget h5,
 .archive .sidebar .widget h5 {
   margin-bottom: 10px;
+}
+
+.blog .gallery__step2 .sidebar .widget,
+.archive .gallery__step2 .sidebar .widget {
+  padding: 0 11px;
+}
+
+.blog .gallery__step2 .sidebar .widget h5,
+.archive .gallery__step2 .sidebar .widget h5 {
+  margin-bottom: 2px;
+}
+
+.single-gallery-page .related_articles {
+  padding-bottom: 25px;
+}
+
+.single-gallery-page .related_list {
+  border: none;
+}
+
+.single-gallery-page .related_list .related_title {
+  color: #000 !important;
 }
 
 .blog .featured_heading {
@@ -1450,15 +1478,16 @@ List Moodboards
   width: 57px;
   height: 57px;
   position: absolute;
-  top: 50%;
+  top: -webkit-calc(50% - 28px);
+  top: calc(50% - 28px);
   margin: 0 auto;
   left: 0;
   right: 0;
   color: #FFF;
   text-align: center;
-  -webkit-transform: translateY(-50%) scale(0.5);
-      -ms-transform: translateY(-50%) scale(0.5);
-          transform: translateY(-50%) scale(0.5);
+  -webkit-transform: scale(0.5);
+      -ms-transform: scale(0.5);
+          transform: scale(0.5);
   opacity: 0;
   -webkit-transition: all 0.2s;
           transition: all 0.2s;
@@ -1472,9 +1501,9 @@ List Moodboards
 }
 
 .isotope .element-item > a:hover:after {
-  -webkit-transform: translateY(-50%) scale(1);
-      -ms-transform: translateY(-50%) scale(1);
-          transform: translateY(-50%) scale(1);
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
   opacity: 1;
 }
 
@@ -1525,6 +1554,15 @@ List Moodboards
 /*********************
 Single Moodboards
 *********************/
+.archive.category-moodboards .breadcrumbs {
+  color: #457d8f !important;
+}
+
+.archive.category-moodboards .home,
+.archive.category-moodboards a {
+  color: #457d8f !important;
+}
+
 .moodboard .pinit-button {
   display: none !important;
 }
@@ -1543,19 +1581,10 @@ Single Moodboards
   font-size: 18px;
 }
 
-.moodboard_colors a {
-  display: inline-block;
-  width: 57px;
-  height: 56px;
-  background-image: url("../images/color-shape.png");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: contain;
-  margin: 0 6px 15px;
-}
-
-.moodboard_colors a:hover {
-  opacity: 0.7;
+.moodboard_colors img {
+  height: 55px;
+  width: auto;
+  margin-bottom: 15px;
 }
 
 .moodboard .isotope {

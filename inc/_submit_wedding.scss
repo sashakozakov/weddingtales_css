@@ -1,0 +1,126 @@
+
+.submit-wedding{
+	.gform_wrapper{
+		.gform_heading{display: none;}
+		h2.gsection_title{
+			font-family: $head_font;
+			font-size: 17px;
+			letter-spacing: .5px !important;
+			font-style: italic;
+			border-bottom: 2px solid #ae9760;
+			padding-bottom: 6px !important;
+		}
+		.gsection{
+			padding-bottom: 0;
+			border-bottom: none;
+			padding-left: 40px;
+			background: url('../images/list_elem.png') no-repeat;
+			background-position: 0 0;
+			padding: 8px 0 8px 43px;
+			margin-bottom: 12px;
+			position: relative;
+			&:before{
+				position: absolute;
+				content: "";
+				width: 24px;
+				height: 12px;
+				top: 13px;
+				left: 6px;
+				background: url('../images/bow.png') no-repeat;
+				background-size: contain;
+			}
+		}
+		.top_label div.ginput_container{
+			margin-top: 0;
+		}
+		.top_label {
+			.gfield_label{
+				font-weight: 400;
+				letter-spacing: -.3px;
+				line-height: 1.7;
+				margin-bottom: 8px;
+				&:empty{display: none;}
+			}
+			li.gfield.gf_left_half,
+			li.gfield.gf_right_half{
+				max-width: 380px;
+			}
+		}
+		ul.gform_fields li.gfield{
+			padding-right: 0;
+			margin-top: 0;
+			hr{
+				margin: 13px 0;
+			}
+			&.regular{
+				.gfield_label{
+					font-weight: 600;
+				}
+			}
+			&.hidden{
+				.gfield_label {display: none;}
+			}
+			input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]){
+				max-width: 235px;
+				height: 31px;
+				line-height: 31px;
+				background: #E9E5DA;
+				border: none;
+				outline:none;
+				font-size: 14px;
+			    font-weight: 400;
+			    padding: 0 11px !important;
+			    margin-bottom: 9px;
+			}
+			textarea{
+				background: #E9E5DA;
+				padding: 11px !important;
+				border: none;
+				outline:none;
+				height: 152px;
+			}
+		}
+		.gform_footer{
+			text-align: left;
+			input[type="reset"]{
+				color: $main_color;
+				background:transparent;
+				&:hover{
+					background:transparent;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+
+	.likebtn_container{display: none;}
+}
+
+
+
+.submit-wedding .gform_wrapper{
+	.chosen-container{
+		.chosen-search{
+			display: none;
+		}
+		&-single {
+			.chosen-single{
+				background:transparent;
+				border:none;
+				border-bottom:2px solid $main_color;
+				border-radius: 0;
+				box-shadow: none;
+			}
+		}
+		&-active.chosen-with-drop {
+			.chosen-single{
+				background:transparent;
+				border:none;
+				border-bottom:2px solid $main_color;
+				border-radius: 0;
+				box-shadow: none;
+			}
+		}
+	}
+}

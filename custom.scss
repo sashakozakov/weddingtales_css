@@ -303,16 +303,26 @@ ol.numbers,
 			font-weight: bold;
 			font-family: $font;
 			padding-bottom: 0;
+			.likebtn-mlw-title{
+				margin-bottom: 5px;
+				line-height: 17px;
+			}
 			&:hover{
 				text-decoration: underline;
 			}
 			&:before{display: none !important;}
+		}
+		.likebtn-mlw-excerpt{
+			line-height: 1.25;
 		}
 		// .likebtn-mlw-excerpt{
 		// 	max-height: 44px;
 		// 	overflow: hidden;
 		// }
 	}
+}
+ul li.likebtn-mlw-item{
+	padding-bottom: 7px;
 }
 // ul.likebtn-mlw li{
 // 	margin-bottom: 0;
@@ -352,27 +362,36 @@ a {
 		text-align: left;
 		padding: 5px 10px;
 		margin: 0;
-		position: absolute;
+		// position: absolute;
 		bottom: 0;
 		left: 0;
 		z-index: 9999;
-		opacity: 0;
 		transition: all 0.2s ease-out;
-		p{
 			margin-bottom: 0;
 			font-style: italic;
 			color: $second;
 			strong{
 				color: #000;
 			}
-		}
 	}
 	&:hover{
 		.fancybox-title{
-			opacity: 1;
 			// transform: translateY(-100%);
 		}
 	}
+}
+
+
+a.pinit-button.custom span{
+	height: 44px !important;
+	background-position: 0 0;
+	background-size: 44px 90px !important;
+}
+
+.single-post a.pinit-button.custom span{
+	height: 44px !important;
+	background-position: 0 -46px !important;
+	background-size: 44px 90px !important;
 }
 
 /*-------------------------------
@@ -1212,6 +1231,7 @@ ul.pagination li a {
 				font-size: 11px;
 				color: $second;
 				font-weight: 600;
+				text-transform: uppercase;
 				&:hover{
 					color: inherit;
 					text-decoration: underline;
@@ -1290,6 +1310,9 @@ ul.pagination li a {
 
 @import "inc/single_vendor";
 
+@import "inc/default-page";
+
+@import "inc/submit_wedding";
 
 
 /* -----------------------------------------

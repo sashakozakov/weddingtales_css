@@ -1,0 +1,57 @@
+.page-template-default{
+	h1{font-size: 29px;}
+	h2{font-size: 25px;}
+	h3{font-size: 22px;}
+	h4{font-size: 19px;}
+	h5{font-size: 17px;}
+	h6{font-size: 15px;}
+	h1,h2,h3,h4,h5,h6{
+		font-family: $gfs_diot;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	.sidebar .widget h5{
+		font-family: $font;
+	}
+	.breadcrumbs{
+		color: $main_color !important;
+		.home {
+			color: $main_color !important;
+		}
+	}
+
+	p{
+		line-height: 1.75;
+		margin-bottom: 21px;
+		a{
+			color: $main_color;
+			text-decoration: none;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+	.page-image{
+		margin-bottom: 48px;
+	}
+	.page_title{
+		position: relative;
+		padding-bottom: 23px;
+		margin-bottom: 51px;
+		letter-spacing: 1.4px;
+		text-transform: none;
+		&:before{
+			position: absolute;
+			content: "";
+			top: 100%;
+			left: 0;
+			right: 0;
+			height: 1px;
+			width: 100%;
+			background: #BEBEBE;
+		}
+	}
+	.likebtn_container{
+		display: none;
+	}
+}

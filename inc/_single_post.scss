@@ -24,7 +24,7 @@ SINGLE - Post
 		color: #000;
 		margin-bottom: 15px;
 		a{
-			color: $second;
+			color: $second !important;
 			&:hover{
 			}
 		}
@@ -98,6 +98,14 @@ SINGLE - Post
 		.lb-style-custom .lb-like,
 		.lb-style-custom .lb-dislike{
 			border: none;
+		}
+		.likebtn-wrapper{
+			&:before{
+				position: absolute;
+				content: "";
+				top: 0;bottom: 0;right: 0;left: 0;
+				z-index: 999;
+			}
 		}
 		.comment_number,
 		.lb-style-custom .lb-count{

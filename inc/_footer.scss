@@ -137,7 +137,7 @@
           text-transform: uppercase;
           position: relative;
           &:hover{
-            color: $main_color;
+            text-decoration: underline;
           }
         }
         .sub-menu{

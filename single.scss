@@ -398,10 +398,6 @@ SIDEBAR
   }
   img{
     -webkit-backface-visibility: hidden;
-    transition: all 0.3s;
-    &:hover{
-      opacity: 0.8;
-    }
   }
 }
 
@@ -822,6 +818,9 @@ SINGLE - Article
     list-style-type: none;
     margin-left: 0;
     border-bottom: 1px solid #bebebe;
+    &:empty{
+      display: none;
+    }
   }
 
   &_item{
@@ -963,6 +962,14 @@ List - Article
 - Blog - List Post,
 - Archive
 *********************/
+.archive.category{
+  .breadcrumbs{
+    color: $second !important;
+    .home, a{
+      color: $second !important;
+    }
+  }
+}
 .blog,
 .archive{
   background: #F8F8F8;
@@ -1048,6 +1055,28 @@ List - Article
       h5{
         margin-bottom: 10px;
       }
+    }
+  }
+  .gallery__step2{
+    .sidebar{
+      .widget{
+        padding: 0 11px;
+        h5{
+          margin-bottom: 2px;
+        }
+      }
+    }
+  }
+}
+
+.single-gallery-page{
+  .related_articles{
+    padding-bottom: 25px;
+  }
+  .related_list{
+    border:none;
+    .related_title{
+      color: #000 !important;
     }
   }
 }
@@ -1298,12 +1327,12 @@ List Moodboards
         width: 57px;
         height: 57px;
         position: absolute;
-        top: 50%;
+        top: calc(50% - 28px);
         margin: 0 auto;
         left: 0;right: 0;
         color: #FFF;
         text-align: center;
-        transform:translateY(-50%) scale(.5);
+        transform:scale(.5);
         opacity: 0;
         transition: all .2s;
       }
@@ -1313,7 +1342,7 @@ List Moodboards
           background: rgba(70,126,144,.4);
         }
         &:after{
-          transform:translateY(-50%) scale(1);
+          transform:scale(1);
           opacity: 1;
         }
       }
@@ -1359,6 +1388,17 @@ List Moodboards
 /*********************
 Single Moodboards
 *********************/
+.archive{
+  &.category-moodboards{
+    .breadcrumbs{
+      color: $second !important;
+    }
+    .home,
+    a{
+      color: $second !important;
+    }
+  }
+}
 .moodboard{
   .pinit-button{
     display: none !important;
@@ -1375,18 +1415,10 @@ Single Moodboards
       font-family: $GFSDidotBoldItalic;
       font-size: 18px;
     }
-    a{
-      display: inline-block;
-      width: 57px;
-      height: 56px;
-      background-image: url('../images/color-shape.png');
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      background-size: contain;
-      margin: 0 6px 15px;
-      &:hover{
-        opacity: $img_opacity;
-      }
+    img{
+      height: 55px;
+      width: auto;
+      margin-bottom: 15px;
     }
   }
 
