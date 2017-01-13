@@ -244,7 +244,8 @@
   margin-bottom: 15px;
 }
 
-.breadcrumbs a:hover {
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
   color: inherit;
   text-decoration: underline;
 }
@@ -520,6 +521,14 @@ SIDEBAR
 
 .widget_for-you a {
   margin-bottom: 15px;
+}
+
+.widget_categories .children {
+  display: none;
+}
+
+.widget_categories ul li a:before {
+  color: #457d8f;
 }
 
 /*********************
@@ -957,6 +966,18 @@ SINGLE - Article
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 15px;
+  position: relative;
+}
+
+.related_image:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  -webkit-transition: all 0.2s;
+          transition: all 0.2s;
 }
 
 @media only screen and (min-width: 768px) {
@@ -966,8 +987,8 @@ SINGLE - Article
   }
 }
 
-.related_image:hover {
-  opacity: 0.7;
+.related_image:hover:before {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .related_title {
@@ -1009,10 +1030,22 @@ List - Article
   background-size: cover;
   width: 100%;
   height: 550px;
+  position: relative;
 }
 
-.featured_image:hover {
-  opacity: 0.7;
+.featured_image:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: all 0.2s;
+          transition: all 0.2s;
+}
+
+.featured_image:hover:before {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .featured_heading {
@@ -1024,6 +1057,7 @@ List - Article
   position: absolute;
   bottom: 0;
   left: 50%;
+  z-index: 10;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -1200,6 +1234,11 @@ List - Article
 .blog .gallery__step2 .sidebar .widget h5,
 .archive .gallery__step2 .sidebar .widget h5 {
   margin-bottom: 2px;
+}
+
+.blog .gallery__step2 .sidebar .widget ul li a:before,
+.archive .gallery__step2 .sidebar .widget ul li a:before {
+  color: #457d8f;
 }
 
 .single-gallery-page .related_articles {
@@ -1558,9 +1597,13 @@ Single Moodboards
   color: #457d8f !important;
 }
 
-.archive.category-moodboards .home,
-.archive.category-moodboards a {
+.archive.category-moodboards .breadcrumbs .home,
+.archive.category-moodboards .breadcrumbs a {
   color: #457d8f !important;
+}
+
+.archive.category-moodboards .widget ul li a:before {
+  color: #457d8f;
 }
 
 .moodboard .pinit-button {
@@ -1710,6 +1753,10 @@ COMMENT FORM STYLES
 .comment-reply-title {
   font-size: 18px;
   margin-bottom: 20px;
+}
+
+.comment-reply-title span {
+  display: none;
 }
 
 .comment-respond {

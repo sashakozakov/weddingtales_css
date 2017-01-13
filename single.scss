@@ -161,7 +161,8 @@
   text-transform: uppercase;
   margin-bottom: 15px;
   a{
-    &:hover{
+    &:hover,
+    &:focus{
       color: inherit;
       text-decoration: underline;
     }
@@ -423,6 +424,16 @@ SIDEBAR
   }
   a{
     margin-bottom: 15px;
+  }
+}
+
+// Widget - Categories
+.widget_categories{
+  .children{
+    display: none;
+  }
+  ul li a:before {
+    color: $second;
   }
 }
 
@@ -843,13 +854,22 @@ SINGLE - Article
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 15px;
+    position: relative;
+    &:before{
+      position: absolute;
+      content: "";
+      top: 0;bottom: 0;right: 0;left: 0;
+      transition: all .2s;
+    }
     @media only screen and (min-width: 768px){
       height: 175px;
       padding-bottom: 0;
     }
 
     &:hover{
-      opacity: $img_opacity;
+      &:before{
+        background: rgba(255,255,255,.3);
+      }
     }
   }
 
@@ -890,8 +910,18 @@ List - Article
     background-size: cover;
     width: 100%;
     height: 550px;
+    position: relative;
+    &:before{
+      position: absolute;
+      content: "";
+      top: 0;bottom: 0;left: 0;right: 0;
+      transition: all .2s;
+    }
     &:hover{
-      opacity: $img_opacity;
+      &:before{
+        background: rgba(255,255,255,.3);
+      }
+      // opacity: $img_opacity;
     }
   }
   &_heading{
@@ -903,6 +933,7 @@ List - Article
     position: absolute;
     bottom: 0;
     left: 50%;
+    z-index: 10;
     transform: translateX(-50%);
     h3{
       font-size: 19px;
@@ -1063,6 +1094,9 @@ List - Article
         padding: 0 11px;
         h5{
           margin-bottom: 2px;
+        }
+        ul li a:before {
+          color: $second;
         }
       }
     }
@@ -1392,10 +1426,13 @@ Single Moodboards
   &.category-moodboards{
     .breadcrumbs{
       color: $second !important;
+      .home,
+      a{
+        color: $second !important;
+      }
     }
-    .home,
-    a{
-      color: $second !important;
+    .widget ul li a:before{
+      color: $second;
     }
   }
 }
@@ -1552,6 +1589,9 @@ COMMENT FORM STYLES
 .comment-reply-title{
   font-size: 18px;
   margin-bottom: 20px;
+  span{
+    display: none;
+  }
 }
 
 .comment-respond {

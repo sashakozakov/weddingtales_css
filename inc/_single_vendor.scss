@@ -18,9 +18,15 @@
 		&--for{
 			margin-bottom: 20px;
 			.vendor__slide{
-				max-height: 489px;
+				max-height: 530px;
 				overflow: hidden;
 				float: left;
+				text-align: center;
+				img{
+					width: auto;
+					height: inherit;
+					display: inline-block;
+				}
 				&.video{
 					text-align: center;
 					@media (max-width:900px){
@@ -222,6 +228,10 @@
 				margin-bottom: 16px;
 				outline: none !important;
 				box-shadow: none !important;
+				&:hover,
+				&:focus{
+					border: 1px solid #ae9760;
+				}
 			}
 			textarea{
 				height: 138px;
