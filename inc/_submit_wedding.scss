@@ -99,28 +99,89 @@
 
 
 
-.submit-wedding .gform_wrapper{
+.submit-wedding {
+	.simple_list{
+		margin-bottom: 18px;
+		&.gform_wrapper .gsection{
+			margin-bottom: 0;
+		}
+		.gform_fields{
+			margin-bottom: 7px !important;
+			li:not(.gsection){
+				border-bottom: 1px solid #bebebe;
+				position: relative;
+				padding: 9px 0 10px 43px;
+				&:before{
+					position: absolute;
+					content: "";
+					width: 6px;
+					height: 6px;
+					border-radius: 50%;
+					background: $main_color;
+					top: 16px;
+					left: 15px;
+				}
+				&:last-child{
+					border-bottom: none;
+				}
+			}
+		}
+	}
+	.gform_wrapper{
 	.chosen-container{
+		max-width: 251px;
+		margin-bottom: 27px;
+		margin-top: 5px;
+		.chosen-drop{
+			border-color: $main_color;
+			margin: 0;
+		}
 		.chosen-search{
 			display: none;
 		}
 		&-single {
+			padding: 0;
 			.chosen-single{
 				background:transparent;
 				border:none;
-				border-bottom:2px solid $main_color;
+				border-bottom:1px solid $main_color;
 				border-radius: 0;
 				box-shadow: none;
+				div{
+					width: 24px;
+					b{
+						background: url(../images/icon-arrow-down.png) no-repeat 50%;
+						width: 22px;
+						height: 17px;
+						background-size: contain;
+					}
+				}
 			}
 		}
 		&-active.chosen-with-drop {
 			.chosen-single{
 				background:transparent;
 				border:none;
-				border-bottom:2px solid $main_color;
+				border-bottom:1px solid $main_color;
 				border-radius: 0;
 				box-shadow: none;
+				div{
+					b{
+						background-position: 0;
+						transform: rotate(180deg);
+					}
+				}
+			}
+		}
+
+		.chosen-results {
+			padding: 0;
+			margin: 0;
+			// border: 1px solid $main_color;
+			li.highlighted{
+				background: $main_color;
 			}
 		}
 	}
+}
 }
