@@ -649,7 +649,8 @@ ul.pagination li a {
 				top: 100%;
 				right: 15px;
 				z-index: 99;
-				input[type="text"]{
+				input[type="text"],
+				input[type="search"]{
 					height: 32px;
 				}
 			}
@@ -857,6 +858,23 @@ ul.pagination li a {
 	}
 
 	.banners{
+		.left_banner_new,
+		.right_banner_new{
+			display: block;
+			text-align: center;
+			img{
+				display: inline-block;
+				&.hover{
+					display: none;
+				}
+			}
+			&:hover{
+				img{
+					&.static{display: none;}
+					&.hover{display: inline-block;}
+				}
+			}
+		}
 		.left_banner{
 			max-width: 543px;
 			width: 100%;
@@ -1303,6 +1321,26 @@ ul.pagination li a {
 }
 
 
+.archive{
+	&.tax-post-color,
+	&.tax-post-season,
+	&.tax-post-settings,
+	&.tax-post-style {
+		.breadcrumbs {
+			color: $second !important;
+			.home,
+			a{
+				color: $second !important;
+			}
+		}
+		.widget ul li a:before{
+			color: $second;
+		}
+	}
+}
+
+
+
 /* ------------------------------------
     Single Post Styles
 ------------------------------------- */
@@ -1314,6 +1352,7 @@ ul.pagination li a {
 
 @import "inc/submit_wedding";
 
+@import "inc/search_page";
 
 /* -----------------------------------------
     Contact Form

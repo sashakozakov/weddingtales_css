@@ -2,6 +2,7 @@
 .submit-wedding{
 	.gform_wrapper{
 		.gform_heading{display: none;}
+		.gform_body{width: 100% !important;}
 		h2.gsection_title{
 			font-family: $head_font;
 			font-size: 17px;
@@ -34,6 +35,9 @@
 			margin-top: 0;
 		}
 		.top_label {
+			.ginput_container_email{
+				margin-bottom: 4px;
+			}
 			.gfield_label{
 				font-weight: 400;
 				letter-spacing: -.3px;
@@ -44,6 +48,9 @@
 			li.gfield.gf_left_half,
 			li.gfield.gf_right_half{
 				max-width: 380px;
+				@media(max-width:640px){
+					max-width: 100%;
+				}
 			}
 		}
 		ul.gform_fields li.gfield{
@@ -71,6 +78,10 @@
 			    font-weight: 400;
 			    padding: 0 11px !important;
 			    margin-bottom: 9px;
+				@media(max-width:640px){
+					max-width: 100%;
+					width: 100%;
+				}
 			}
 			textarea{
 				background: #E9E5DA;
@@ -82,6 +93,13 @@
 		}
 		.gform_footer{
 			text-align: left;
+				@media(max-width:640px){
+					text-align: center;
+					input:not([type=radio]):not([type=checkbox]):not([type=image]):not([type=file]){
+						width: auto;
+						display: inline-block;
+					}
+				}
 			input[type="reset"]{
 				color: $main_color;
 				background:transparent;
@@ -100,6 +118,67 @@
 
 
 .submit-wedding {
+	.contact__banner{
+		float: left;
+		width: 100%;
+		padding: 9px;
+		background: #FFF;
+		margin: 10px 0 30px;
+		.image{
+			width: 34%;
+			float: left;
+			background-size: cover;
+			background-position: 0 50%;
+			position: relative;
+			img{
+				display: none;
+			}
+			@media (max-width:767px){
+				width: 100%;
+				text-align: center;
+				background: none !important;
+				img{
+					display: inline-block;
+				}
+			}
+			&:before{
+				position: absolute;
+				content: "";
+				top: 0;bottom: 0;right: 0;left: 0;
+				// background-image: linear-gradient(to left, #ffffff,
+				// 	rgba(255, 255, 255, 0.32),
+				// 	rgba(30, 87, 153, 0),
+				// 	rgba(255, 255, 255, 0));
+				background: linear-gradient(to right,
+					rgba(255,255,255,0) 46%,
+					rgba(255,255,255,0) 48%,
+					rgba(255,255,255,1) 100%);
+				@media (max-width:767px){display: none;}
+			}
+		}
+		.content{
+			width: 66%;
+			float: left;
+			padding: 15px 0 5px;
+			@media (max-width:767px){
+				width: 100%;
+			}
+			&.full{
+				width: 100%;
+			}
+			p{
+				margin-bottom: 28px;
+				letter-spacing: -.25px;
+				a{
+					color: $main_color;
+					text-decoration: none;
+					&:hover{
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
 	.simple_list{
 		margin-bottom: 18px;
 		&.gform_wrapper .gsection{
@@ -111,6 +190,7 @@
 				border-bottom: 1px solid #bebebe;
 				position: relative;
 				padding: 9px 0 10px 43px;
+				line-height: 1.55;
 				&:before{
 					position: absolute;
 					content: "";

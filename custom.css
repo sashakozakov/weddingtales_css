@@ -323,6 +323,7 @@
   font-size: inherit;
   display: inline;
   text-transform: uppercase;
+  line-height: 1.4;
 }
 .relationship_grid--categories a:hover {
   color: inherit;
@@ -999,7 +1000,8 @@ ul.pagination li a {
   right: 15px;
   z-index: 99;
 }
-.header_top .search + form input[type="text"] {
+.header_top .search + form input[type="text"],
+.header_top .search + form input[type="search"] {
   height: 32px;
 }
 .header .logo a {
@@ -1199,6 +1201,27 @@ ul.pagination li a {
   vertical-align: top;
 }
 
+.banners .left_banner_new,
+.banners .right_banner_new {
+  display: block;
+  text-align: center;
+}
+.banners .left_banner_new img,
+.banners .right_banner_new img {
+  display: inline-block;
+}
+.banners .left_banner_new img.hover,
+.banners .right_banner_new img.hover {
+  display: none;
+}
+.banners .left_banner_new:hover img.static,
+.banners .right_banner_new:hover img.static {
+  display: none;
+}
+.banners .left_banner_new:hover img.hover,
+.banners .right_banner_new:hover img.hover {
+  display: inline-block;
+}
 .banners .left_banner {
   max-width: 543px;
   width: 100%;
@@ -1640,6 +1663,20 @@ ul.pagination li a {
   margin-top: 58px;
 }
 .blogger .relationship_grid--categories {
+  color: #457d8f;
+}
+
+.archive.tax-post-color .breadcrumbs, .archive.tax-post-season .breadcrumbs, .archive.tax-post-settings .breadcrumbs, .archive.tax-post-style .breadcrumbs {
+  color: #457d8f !important;
+}
+.archive.tax-post-color .breadcrumbs .home,
+.archive.tax-post-color .breadcrumbs a, .archive.tax-post-season .breadcrumbs .home,
+.archive.tax-post-season .breadcrumbs a, .archive.tax-post-settings .breadcrumbs .home,
+.archive.tax-post-settings .breadcrumbs a, .archive.tax-post-style .breadcrumbs .home,
+.archive.tax-post-style .breadcrumbs a {
+  color: #457d8f !important;
+}
+.archive.tax-post-color .widget ul li a:before, .archive.tax-post-season .widget ul li a:before, .archive.tax-post-settings .widget ul li a:before, .archive.tax-post-style .widget ul li a:before {
   color: #457d8f;
 }
 
@@ -3043,6 +3080,9 @@ SINGLE - Post
 .submit-wedding .gform_wrapper .gform_heading {
   display: none;
 }
+.submit-wedding .gform_wrapper .gform_body {
+  width: 100% !important;
+}
 .submit-wedding .gform_wrapper h2.gsection_title {
   font-family: "GFS Didot", sans-serif;
   font-size: 17px;
@@ -3074,6 +3114,9 @@ SINGLE - Post
 .submit-wedding .gform_wrapper .top_label div.ginput_container {
   margin-top: 0;
 }
+.submit-wedding .gform_wrapper .top_label .ginput_container_email {
+  margin-bottom: 4px;
+}
 .submit-wedding .gform_wrapper .top_label .gfield_label {
   font-weight: 400;
   letter-spacing: -.3px;
@@ -3086,6 +3129,12 @@ SINGLE - Post
 .submit-wedding .gform_wrapper .top_label li.gfield.gf_left_half,
 .submit-wedding .gform_wrapper .top_label li.gfield.gf_right_half {
   max-width: 380px;
+}
+@media (max-width: 640px) {
+  .submit-wedding .gform_wrapper .top_label li.gfield.gf_left_half,
+  .submit-wedding .gform_wrapper .top_label li.gfield.gf_right_half {
+    max-width: 100%;
+  }
 }
 .submit-wedding .gform_wrapper ul.gform_fields li.gfield {
   padding-right: 0;
@@ -3112,6 +3161,12 @@ SINGLE - Post
   padding: 0 11px !important;
   margin-bottom: 9px;
 }
+@media (max-width: 640px) {
+  .submit-wedding .gform_wrapper ul.gform_fields li.gfield input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+    max-width: 100%;
+    width: 100%;
+  }
+}
 .submit-wedding .gform_wrapper ul.gform_fields li.gfield textarea {
   background: #E9E5DA;
   padding: 11px !important;
@@ -3121,6 +3176,15 @@ SINGLE - Post
 }
 .submit-wedding .gform_wrapper .gform_footer {
   text-align: left;
+}
+@media (max-width: 640px) {
+  .submit-wedding .gform_wrapper .gform_footer {
+    text-align: center;
+  }
+  .submit-wedding .gform_wrapper .gform_footer input:not([type=radio]):not([type=checkbox]):not([type=image]):not([type=file]) {
+    width: auto;
+    display: inline-block;
+  }
 }
 .submit-wedding .gform_wrapper .gform_footer input[type="reset"] {
   color: #ae9760;
@@ -3134,6 +3198,72 @@ SINGLE - Post
   display: none;
 }
 
+.submit-wedding .contact__banner {
+  float: left;
+  width: 100%;
+  padding: 9px;
+  background: #FFF;
+  margin: 10px 0 30px;
+}
+.submit-wedding .contact__banner .image {
+  width: 34%;
+  float: left;
+  background-size: cover;
+  background-position: 0 50%;
+  position: relative;
+}
+.submit-wedding .contact__banner .image img {
+  display: none;
+}
+@media (max-width: 767px) {
+  .submit-wedding .contact__banner .image {
+    width: 100%;
+    text-align: center;
+    background: none !important;
+  }
+  .submit-wedding .contact__banner .image img {
+    display: inline-block;
+  }
+}
+.submit-wedding .contact__banner .image:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0) 48%, #ffffff 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0) 48%, #ffffff 100%);
+}
+@media (max-width: 767px) {
+  .submit-wedding .contact__banner .image:before {
+    display: none;
+  }
+}
+.submit-wedding .contact__banner .content {
+  width: 66%;
+  float: left;
+  padding: 15px 0 5px;
+}
+@media (max-width: 767px) {
+  .submit-wedding .contact__banner .content {
+    width: 100%;
+  }
+}
+.submit-wedding .contact__banner .content.full {
+  width: 100%;
+}
+.submit-wedding .contact__banner .content p {
+  margin-bottom: 28px;
+  letter-spacing: -.25px;
+}
+.submit-wedding .contact__banner .content p a {
+  color: #ae9760;
+  text-decoration: none;
+}
+.submit-wedding .contact__banner .content p a:hover {
+  text-decoration: underline;
+}
 .submit-wedding .simple_list {
   margin-bottom: 18px;
 }
@@ -3147,6 +3277,7 @@ SINGLE - Post
   border-bottom: 1px solid #bebebe;
   position: relative;
   padding: 9px 0 10px 43px;
+  line-height: 1.55;
 }
 .submit-wedding .simple_list .gform_fields li:not(.gsection):before {
   position: absolute;
@@ -3211,6 +3342,38 @@ SINGLE - Post
 }
 .submit-wedding .gform_wrapper .chosen-container .chosen-results li.highlighted {
   background: #ae9760;
+}
+
+.search-results .likebtn_container {
+  display: none !important;
+}
+.search-results .search-content__title {
+  font-size: 20px;
+}
+@media (max-width: 480px) {
+  .search-results .search-content__title {
+    font-size: 16px;
+  }
+}
+.search-results .search-content__title a:hover {
+  color: #ae9760;
+  text-decoration: underline;
+}
+.search-results .search-content__row {
+  border-bottom: 1px solid #bebebe;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+}
+.search-results .search-content__row:last-child {
+  border: none;
+}
+.search-results .search-content__row p {
+  margin-bottom: 7px;
+}
+@media (max-width: 767px) {
+  .search-results .search-content .sidebar {
+    display: none;
+  }
 }
 
 /* -----------------------------------------

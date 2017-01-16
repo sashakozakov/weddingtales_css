@@ -346,6 +346,26 @@ SIDEBAR
   }
 }
 
+.widget .likebtn-mlw li {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  a .likebtn-mlw-title{
+        display: inline-block;
+        color: #000;
+        font-size: 13px;
+        font-weight: bold;
+        font-family: $font;
+        padding-bottom: 0;
+        padding: 7px 0 0;
+  }
+  .likebtn-mlw-excerpt{
+        font-size: 13px;
+        line-height: 1.5;
+        margin: 0 0 7px;
+        font-weight: 300;
+  }
+}
+
 .widget_widget_recent_articles{
   h5{
     margin-bottom: 3px;
@@ -792,6 +812,13 @@ SINGLE - Article
         right: -20px;
       }
     }
+    @media only screen and (max-width: 767px){
+      max-width: 360px;
+      padding-bottom: 0;
+      margin: 0 auto;
+      height: 300px;
+    }
+
 
     &:hover{
       opacity: $img_opacity;
